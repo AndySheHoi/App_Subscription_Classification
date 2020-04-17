@@ -75,7 +75,7 @@ print("Test Set Accuracy: %0.4f" % accuracy_score(y_test, y_pred))
 # Applying k-Fold Cross Validation
 from sklearn.model_selection import cross_val_score
 accuracies = cross_val_score(estimator = model, X = X_train, y = y_train, cv = 10)
-print("Accuracy with CV: %0.4f (+/- %0.4f)" % (accuracies.mean(), accuracies.std()))
+print("Accuracy with CV: %0.4f (+/- %0.4f)" % (accuracies.mean(), accuracies.std()*2))
 
 
 # =============================================================================
